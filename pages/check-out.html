@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../css/boutique.css">
     <link rel="stylesheet" href="../css/detail-boutique.css">
     <link rel="stylesheet" href="../css/panier.css">
+    <link rel="stylesheet" href="../css/check-out.css">
 
 
     <!-- Google Fonts -->
@@ -60,10 +61,10 @@
                     <a class="nav-link " href="../pages/detail-boutique.html">Détail de la Boutique</a>
                   </li>
                   <li class="nav-item mx-1">
-                    <a class="nav-link active" href="../pages/panier.html">Panier</a>
+                    <a class="nav-link" href="../pages/panier.html">Panier</a>
                   </li>
                   <li class="nav-item mx-1">
-                    <a class="nav-link" href="../pages/check-out.html">Check-out</a>
+                    <a class="nav-link active" href="../pages/panier.html">Check-out</a>
                   </li>
                   <li class="nav-item mx-1">
                     <a class="nav-link" href="#">Contact</a>
@@ -94,11 +95,11 @@
           <div class="banner-over pt-lg-3 pb-lg-2 px-lg-0 px-2">
             <div class="banner-texte container pt-5 my-5">
               <div class="row">
-                <h1 class="text-center fw-bold">Panier</h1>
+                <h1 class="text-center fw-bold">Check-out</h1>
                 <p class="fs-4">
                     <a href="../index.html" style="color: var(--color-jaune);">Accueil</a>
                     <span style="color: #3d3838;">/</span>
-                    <span>Panier</span>
+                    <span>Check-out</span>
                 </p>
               </div>
             </div>
@@ -106,10 +107,50 @@
         </div>
     </section>
 
-    <section id="panier">
+    <section id="check-out" class="mb-5 pb-5">
         <div class="container">
             <div class="row">
-                <table class="table table-striped table-hover">
+                <div class="col-6">
+                  <h1 class="fw-bold">Informations de Livraison</h1>
+                  <p class="fs-6 text-secondary">*Veuillez renseigner les Informationsde celui qui recevra votre commande </p>
+
+                  <form class="row g-3 mb-5 mt-3">
+                    <div class="inputGroup col-6 my-3">
+                      <input type="text" required="" autocomplete="off">
+                      <label for="name">*Nom</label>
+                    </div>
+                    <div class="inputGroup col-6 my-3">
+                      <input type="text" required="" autocomplete="off">
+                      <label for="name">*Prénoms</label>
+                    </div>
+                    <div class="inputGroup my-3">
+                      <input type="text" required="" autocomplete="off">
+                      <label for="name">*Pays</label>
+                    </div>
+                    <div class="inputGroup my-3">
+                      <input type="text" required="" autocomplete="off">
+                      <label for="name">*Ville de livraison</label>
+                    </div>
+                    <div class="inputGroup my-3">
+                      <input type="text" required="" autocomplete="off">
+                      <label for="name">*Adresses de livraison</label>
+                    </div>
+                    <div class="inputGroup my-3">
+                      <input type="text" required="" autocomplete="off">
+                      <label for="name">Code postal</label>
+                    </div>
+                    <div class="inputGroup my-3">
+                      <input type="text" required="" autocomplete="off">
+                      <label for="name">*Numéro de téléphone</label>
+                    </div>
+                    <div class="inputGroup my-3">
+                      <input type="text" required="" autocomplete="off">
+                      <label for="name">Email</label>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-5 ms-auto">
+                  <table class="table table-striped table-hover">
                     <thead>
                       <tr>
                         <th scope="col">Produit</th>
@@ -126,11 +167,7 @@
                         </td>
                         <td class="align-middle">3000 FCFA</td>
                         <td class="align-middle">
-                            <p>
-                                <button onclick="decrement()" class="btn rounded-pill" style="padding: 1px 5px;"><i class="bi bi-dash"></i></button>
-                                <span id="counter" style="padding: 0 5px;">1</span>
-                                <button onclick="increment()" class="btn rounded-pill" style="padding: 1px 5px;"><i class="bi bi-plus"></i></button>
-                            </p>
+                            <p>1</p>
                         </td>
                         <td class="align-middle">6000 FCFA</td>
                         <td class="align-middle">
@@ -143,11 +180,7 @@
                         </td>
                         <td class="align-middle">3000 FCFA</td>
                         <td class="align-middle">
-                            <p>
-                                <button onclick="decrement()" class="btn rounded-pill" style="padding: 1px 5px;"><i class="bi bi-dash"></i></button>
-                                <span id="counter" style="padding: 0 5px;">1</span>
-                                <button onclick="increment()" class="btn rounded-pill" style="padding: 1px 5px;"><i class="bi bi-plus"></i></button>
-                            </p>
+                            <p>1</p>
                         </td>
                         <td class="align-middle">6000 FCFA</td>
                         <td class="align-middle">
@@ -160,11 +193,7 @@
                         </td>
                         <td class="align-middle">3000 FCFA</td>
                         <td class="align-middle">
-                            <p>
-                                <button onclick="decrement()" class="btn rounded-pill" style="padding: 1px 5px;"><i class="bi bi-dash"></i></button>
-                                <span id="counter" style="padding: 0 5px;">1</span>
-                                <button onclick="increment()" class="btn rounded-pill" style="padding: 1px 5px;"><i class="bi bi-plus"></i></button>
-                            </p>
+                            <p>1</p>
                         </td>
                         <td class="align-middle">6000 FCFA</td>
                         <td class="align-middle">
@@ -172,26 +201,42 @@
                         </td>
                       </tr>
                     </tbody>
-                  </table>
+                  </table> <hr>
+
+                  <div class="card pt-2 pb-5" style="background-color: #eee;">
+                    <div class="card-body">
+                      <h1 class="card-title fw-bold my-4">Total Prix</h1> <hr>
+                      <div class="fs-4 fw-normal "><span>Total Panier: </span> <span class="float-end">1000 FCFA</span></div>
+                      <div class="fs-4 fw-normal "><span>Livraison: </span> <span class="float-end">1000 FCFA</span></div> <hr>
+                      <div class="fs-4 fw-normal "><span>Total: </span> <span class="float-end">1000 FCFA</span></div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+
+                <a href="" class="text-decoration-none d-flex justify-content-center py-5 my-3">
+                  <button class="animated-button">
+                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                      </path>
+                    </svg>
+                    <span class="text">Je valide ma Commande </span>
+                    <span class="circle"></span>
+                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                      </path>
+                    </svg>
+                  </button>
+                </a>
+
             </div>
         </div>
     </section>
 
-    <section id="total-panier" class="mb-5 pb-5">
-      <div class="container">
-        <div class="row my-5">
-          <div class="col-4 ms-auto my-5">
-            <div class="card pt-2 pb-5" style="background-color: #eee;">
-              <div class="card-body">
-                <h1 class="card-title fw-bold my-4">Total du panier</h1> <hr>
-                <div class="fs-4 fw-normal "><span>Total Panier: </span> <span class="float-end">1000 FCFA</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
 
   </main>
 
